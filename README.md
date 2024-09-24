@@ -63,6 +63,11 @@ nuclei -update-templates
 
 Once you have installed this template repo using the commands above, you can run the following command to scan for vulnerabilities using Nuclei:
 
+```
+ls | grep -E '.+-[a-f0-9]{32}\.yaml' | xargs -I {} mv {} ./temp-dir/
+[All /readme.txt template remved from this regex 33length hashes]
+
+```
 ```bash
 nuclei -t github/topscoder/nuclei-wordfence-cve -u https://target.com
 ```
