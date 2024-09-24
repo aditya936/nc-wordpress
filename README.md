@@ -65,8 +65,8 @@ Once you have installed this template repo using the commands above, you can run
 
 ```
 ls | grep -E '.+-[a-f0-9]{32}\.yaml' | xargs -I {} mv {} ./temp-dir/
-[All /readme.txt template remved from this regex 33length hashes]
-
+-> [All /readme.txt template remved from this regex 33length hashes]
+-> [-> grep -rn "ASVS" /path/to/nuclei-templates/ | awk -F '.yaml:' '{print $1".yaml"}' >> output.yaml    [check inside "ASVS" from file ] exclude thise]
 ```
 ```bash
 nuclei -t github/topscoder/nuclei-wordfence-cve -u https://target.com
